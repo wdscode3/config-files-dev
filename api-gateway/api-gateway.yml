@@ -18,7 +18,6 @@ eureka:
     instance:
         prefer-ip-address: true
         instance-id: (${random.int(99)}) - ${spring.application.name} - v${application-version}
-
     client:
         registerWithEureka: true
         fetchRegistry: true
@@ -31,7 +30,6 @@ zuul:
     sensitiveHeaders: Cookie,Set-Cookie 
     routes:
         mv-service:
-            sensitiveHeaders:
             path: /mv/**
             service-id: API-MV
             strip-prefix: false
@@ -41,22 +39,18 @@ zuul:
             service-id: API-GSI
             strip-prefix: false
         mensageria-service:
-            sensitiveHeaders:
             path: /mensageria/**
             service-id: API-MENSAGERIA
             strip-prefix: false
         sentinela-service:
-            sensitiveHeaders:
             path: /sentinela/**
             service-id: API-SENTINELA
             strip-prefix: false
         guardian-service:
-            sensitiveHeaders:
             path: /guardian/**
             service-id: API-GUARDIAN
             strip-prefix: false
         biofast-service:
-            sensitiveHeaders:
             path: /biofast/**
             service-id: API-BIOFAST
             strip-prefix: false
