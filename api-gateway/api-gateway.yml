@@ -79,4 +79,4 @@ ribbon:
     eager-load:
         enabled: true #resolve timeout na primeira chamada
 
-app.version: 1.0.0
+app.version: 1.0.0-SNAPSHOT
