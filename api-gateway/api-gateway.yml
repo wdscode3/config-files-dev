@@ -73,6 +73,7 @@ zuul:
     host:
         socket-timeout-millis: 30000
         connect-timeout-millis: 30000
+        
 ribbon:
     ReadTimeout: 60000
     eager-load:
