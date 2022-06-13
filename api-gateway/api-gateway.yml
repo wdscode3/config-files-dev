@@ -9,9 +9,6 @@ spring:
             max-file-size: 5MB
             max-request-size: 5MB
 
-
-application-version: @project.version@
-
 server:
     port: 8090
     servlet:
