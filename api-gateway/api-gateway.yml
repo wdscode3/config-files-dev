@@ -78,3 +78,5 @@ ribbon:
     ReadTimeout: 60000
     eager-load:
         enabled: true #resolve timeout na primeira chamada
+
+app.version: 1.0.0
