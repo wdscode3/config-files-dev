@@ -1,29 +1,3 @@
-spring:
-    application:
-        name: API-GATEWAY
-    jmx:
-        default-domain: gateway
-    servlet:
-        multipart:
-            enabled: true
-            max-file-size: 5MB
-            max-request-size: 5MB
-
-server:
-    port: 8090
-    servlet:
-        context-path: /api
-
-eureka:
-    instance:
-        prefer-ip-address: true
-        instance-id: (${random.int(99)}) - ${spring.application.name} - v${application-version}
-    client:
-        registerWithEureka: true
-        fetchRegistry: true
-        service-url:
-            defaultZone: ${EUREKA_URI:http://localhost:8091/eureka-server/eureka}
-
 zuul:
     ignored-services: '*'
     ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
@@ -78,5 +52,3 @@ ribbon:
     ReadTimeout: 60000
     eager-load:
         enabled: true #resolve timeout na primeira chamada
-
-app.version: 1.0.0-SNAPSHOT
